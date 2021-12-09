@@ -19,11 +19,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #fff;
 }
 
 body{
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
+  background-color: var(--very-dark-blue);
 }
 
 /* weights */
@@ -37,12 +39,4 @@ body{
 
 .fw-heavy{
   font-weight: 500;
-}
-
-
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

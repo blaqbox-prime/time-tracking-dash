@@ -1,0 +1,26 @@
+.Dashboard{
+    
+    margin: 1rem 0; 
+}
+
+.LongCard{
+    background-color: var(--dark-blue);
+}
+
+.LongCard__top{
+    background-color: var(--desaturated-blue);
+    height: 130px;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+}
+
+.LongCard__user{
+    display: flex;
+}
+
+.avatar{
+    margin-right: 1rem;
+    border: 3px solid #fff;
+    border-radius: 35px;
+}
