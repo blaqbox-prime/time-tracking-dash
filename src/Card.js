@@ -1,10 +1,39 @@
 import React from 'react'
 import './dashboard.css'
 
-export default function Card() {
+export default function Card({title, primaryMetrics, secondaryMetrics}) {
+
+    const iconPath = () => {
+        switch(title){
+            case 'Work': 
+               return "images/icon-work.svg";
+            case 'Play':
+                return "images/icon-play.svg";
+            case 'Study':
+                return 'images/icon-study.svg';
+            case 'Exercise':
+                return 'images/icon-exercise.svg';
+            case 'Social':
+                return 'images/icon-social.svg';
+            case 'Self Care':
+                return 'images/icon-self-care.svg'; 
+            default: return;
+        }
+    }
+
     return (
-        <div className="Card">
-            
+        <div className={`Card ${title.replace(' ','_')}`} >
+           <img src={iconPath()} alt="" className="Card__icon" />
+            <div className="Card__details">
+                <div className="row-sb Card__header">
+                    <h1 className='fw-heavy'>{title}</h1>
+                    <img src="images/icon-ellipsis.svg" alt="more" className='more-icon'/>
+                </div>
+                <div className="row-sb">
+                    <h2 className='primaryMetrics fw-light'>{primaryMetrics}</h2>
+                    <p className='secondaryMetrics'>{secondaryMetrics}</p>
+                </div>
+            </div>
         </div>
     )
 }
@@ -23,6 +52,11 @@ export function LongCard(){
                 </div>
             </div>
             {/* Filters */}
+                <ul className="filters">
+                    <li>Daily</li>
+                    <li className='active'>Weekly</li>
+                    <li>Monthly</li>
+                </ul>
             
         </div>
     );
