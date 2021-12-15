@@ -1,190 +1,191 @@
-.Dashboard{
-    margin: 2rem 1rem; 
+.Dashboard {
+  margin: 2rem 1rem;
 }
 
-.LongCard{
-    background-color: var(--dark-blue);
-    border-radius: 1rem;
+.LongCard {
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
 }
 
-.LongCard__top{
-    background-color: var(--desaturated-blue);
-    height: 130px;
-    display: grid;
-    place-items: center;
-    border-radius: 1rem;
+.LongCard__top {
+  background-color: var(--desaturated-blue);
+  height: 130px;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
 }
 
-.LongCard__user{
-    display: flex;
+.LongCard__user {
+  display: flex;
 }
 
-.avatar{
-    margin-right: 1rem;
-    border: 3px solid #fff;
-    border-radius: 35px;
+.avatar {
+  margin-right: 1rem;
+  border: 3px solid #fff;
+  border-radius: 35px;
 }
 
-.filters{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    list-style: none;
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  list-style: none;
 }
 
-.filters > li{
-    cursor: pointer;
-    opacity: .5;
+.filters > li {
+  cursor: pointer;
+  text-transform: capitalize;
+
+  opacity: 0.5;
 }
 
 .filters > li:hover,
-.filters > li.active{
-    opacity: 1;
+.filters > li.active {
+  opacity: 1;
 }
 
 /* Card */
-.Card, .Card__details{
-    border-radius: 1rem;
-    position: relative;
+.Card,
+.Card__details {
+  border-radius: 1rem;
+  position: relative;
 }
-.Card__icon{
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.Card{
-    height: 160px;
-    margin-top: 1rem;
-}
-.Card__details{
-    background-color: var(--dark-blue);
-    position: absolute;
-    padding: 2rem 1rem;
-    height: 120px;
-    width: 100%;
-    bottom: 0;
-}
-.Card__header{
-    margin-bottom: .3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.Card__body{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;   
-}
-.Card h1{
-    font-size: 1rem;
-}
-.Card h2{
-    font-size: 1.5rem;
+.Card__icon {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-.Card p{
-    font-size: .8rem;
+.Card {
+  height: 160px;
+  margin-top: 1rem;
+}
+.Card__details {
+  background-color: var(--dark-blue);
+  position: absolute;
+  padding: 2rem 1rem;
+  height: 120px;
+  width: 100%;
+  bottom: 0;
+}
+.Card__header {
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Card__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Card h1 {
+  font-size: 1rem;
+}
+.Card h2 {
+  font-size: 1.5rem;
+}
+
+.Card p {
+  font-size: 0.8rem;
 }
 
 /* Card backgrounds */
-.Card.Work{
-    background-color: var(--light-red);
+.Card.Work {
+  background-color: var(--light-red);
 }
-.Card.Play{
-    background-color: var(--soft-blue);
+.Card.Play {
+  background-color: var(--soft-blue);
 }
-.Card.Study{
-    background-color: var(--light-red-2);
+.Card.Study {
+  background-color: var(--light-red-2);
 }
-.Card.Exercise{
-    background-color: var(--lime-green);
+.Card.Exercise {
+  background-color: var(--lime-green);
 }
-.Card.Social{
-    background-color: var(--violet);
+.Card.Social {
+  background-color: var(--violet);
 }
-.Card.Self_Care{
-    background-color: var(--soft-orange);
+.Card.Self_Care {
+  background-color: var(--soft-orange);
 }
 
 @media screen and (min-width: 760px) {
-    .Card__body{
-        display: block;
-    }
-    .Card{
-        margin-top: unset;
-        height: 245px;
-        width: 100%;
-    }
-    .Card__details{
-        background-color: var(--dark-blue);
-        position: absolute;
-        padding: 2rem 1rem;
-        height: 200px;
-        width: 100%;
-        bottom: 0;
-    }
+  .Card__body {
+    display: block;
+  }
+  .Card {
+    margin-top: unset;
+    height: 245px;
+    width: 100%;
+  }
+  .Card__details {
+    background-color: var(--dark-blue);
+    position: absolute;
+    padding: 2rem 1rem;
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+  }
 
-    .Dashboard{
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(4,255px);
-        gap: 1rem;
-        margin: unset;
-        grid-template-rows: repeat(2, 245px);
-    }
+  .Dashboard {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 255px);
+    gap: 1rem;
+    margin: unset;
+    grid-template-rows: repeat(2, 245px);
+  }
 
-    .LongCard{
-        height: 100%;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 3;
-    }
-    .LongCard__top{
-        padding: 1.5rem;
-        height: 355px;
-        display: block;
-      
-    }
-    
-    .LongCard__user{
-        display: block;
-    }
-    
-    .avatar{
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-        border: 3px solid #fff;
-        border-radius: 35px;
-    }
-    
-    .filters{
-        display: block;
-        align-items: center;
-        justify-content: space-around;
-        padding-left: 1.5rem;
-        padding-top: .7rem;
-        padding-bottom: unset;
-        list-style: none;
-    }
+  .LongCard {
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .LongCard__top {
+    padding: 1.5rem;
+    height: 355px;
+    display: block;
+  }
 
-    .filters > li {
-        margin-top: .8rem;
-        text-transform: capitalize;
-        font-size: .9rem;
-    }
-    .Card h1{
-        font-size: 1rem;
-    }
-    .Card h2{
-        margin-top: 1.25rem;
-        font-size: 3rem;
-    }
-    
-    .Card p{
-        font-size: .8rem;
-    }
+  .LongCard__user {
+    display: block;
+  }
+
+  .avatar {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border: 3px solid #fff;
+    border-radius: 35px;
+  }
+
+  .filters {
+    display: block;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 1.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: unset;
+    list-style: none;
+  }
+
+  .filters > li {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .Card h1 {
+    font-size: 1rem;
+  }
+  .Card h2 {
+    margin-top: 1.25rem;
+    font-size: 3rem;
+  }
+
+  .Card p {
+    font-size: 0.8rem;
+  }
 }
