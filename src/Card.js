@@ -29,7 +29,7 @@ export default function Card({title, primaryMetrics, secondaryMetrics}) {
                     <h1 className='fw-heavy'>{title}</h1>
                     <img src="images/icon-ellipsis.svg" alt="more" className='more-icon'/>
                 </div>
-                <div className="row-sb">
+                <div className="row-sb Card__body">
                     <h2 className='primaryMetrics fw-light'>{primaryMetrics}</h2>
                     <p className='secondaryMetrics'>{secondaryMetrics}</p>
                 </div>
@@ -39,7 +39,22 @@ export default function Card({title, primaryMetrics, secondaryMetrics}) {
 }
 
 // Long Card
-export function LongCard(){
+export function LongCard({filterDash, currentFilter}){  
+      
+    function buildFilters(){
+        let filterOpts = ['daily','weekly','monthly'];
+        return(
+        <ul className="filters">
+            {filterOpts.map((opt,idx) => {
+                if(opt === currentFilter){
+                    return <li key={idx} onClick={() => {filterDash(opt)}} className='active'>{opt}</li>
+                }else{
+                    return <li key={idx} onClick={() => {filterDash(opt)}}>{opt}</li>
+                }
+            })}
+        </ul>
+        );
+    }
     return (
         <div className="LongCard">
             <div className="LongCard__top">
@@ -52,11 +67,7 @@ export function LongCard(){
                 </div>
             </div>
             {/* Filters */}
-                <ul className="filters">
-                    <li>Daily</li>
-                    <li className='active'>Weekly</li>
-                    <li>Monthly</li>
-                </ul>
+                {buildFilters()}
             
         </div>
     );
