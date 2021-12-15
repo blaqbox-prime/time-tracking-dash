@@ -54,11 +54,6 @@
     right: 0;
     top: 0;
 }
-.row-sb{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .Card{
     height: 160px;
@@ -74,6 +69,14 @@
 }
 .Card__header{
     margin-bottom: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Card__body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
 }
 .Card h1{
     font-size: 1rem;
@@ -104,4 +107,84 @@
 }
 .Card.Self_Care{
     background-color: var(--soft-orange);
+}
+
+@media screen and (min-width: 760px) {
+    .Card__body{
+        display: block;
+    }
+    .Card{
+        margin-top: unset;
+        height: 245px;
+        width: 100%;
+    }
+    .Card__details{
+        background-color: var(--dark-blue);
+        position: absolute;
+        padding: 2rem 1rem;
+        height: 200px;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .Dashboard{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(4,255px);
+        gap: 1rem;
+        margin: unset;
+        grid-template-rows: repeat(2, 245px);
+    }
+
+    .LongCard{
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .LongCard__top{
+        padding: 1.5rem;
+        height: 355px;
+        display: block;
+      
+    }
+    
+    .LongCard__user{
+        display: block;
+    }
+    
+    .avatar{
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        border: 3px solid #fff;
+        border-radius: 35px;
+    }
+    
+    .filters{
+        display: block;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 1.5rem;
+        padding-top: .7rem;
+        padding-bottom: unset;
+        list-style: none;
+    }
+
+    .filters > li {
+        margin-top: .8rem;
+        text-transform: capitalize;
+        font-size: .9rem;
+    }
+    .Card h1{
+        font-size: 1rem;
+    }
+    .Card h2{
+        margin-top: 1.25rem;
+        font-size: 3rem;
+    }
+    
+    .Card p{
+        font-size: .8rem;
+    }
 }
