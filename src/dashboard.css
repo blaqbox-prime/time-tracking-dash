@@ -1,0 +1,107 @@
+.Dashboard{
+    margin: 2rem 1rem; 
+}
+
+.LongCard{
+    background-color: var(--dark-blue);
+    border-radius: 1rem;
+}
+
+.LongCard__top{
+    background-color: var(--desaturated-blue);
+    height: 130px;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+}
+
+.LongCard__user{
+    display: flex;
+}
+
+.avatar{
+    margin-right: 1rem;
+    border: 3px solid #fff;
+    border-radius: 35px;
+}
+
+.filters{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    list-style: none;
+}
+
+.filters > li{
+    cursor: pointer;
+    opacity: .5;
+}
+
+.filters > li:hover,
+.filters > li.active{
+    opacity: 1;
+}
+
+/* Card */
+.Card, .Card__details{
+    border-radius: 1rem;
+    position: relative;
+}
+.Card__icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.row-sb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Card{
+    height: 160px;
+    margin-top: 1rem;
+}
+.Card__details{
+    background-color: var(--dark-blue);
+    position: absolute;
+    padding: 2rem 1rem;
+    height: 120px;
+    width: 100%;
+    bottom: 0;
+}
+.Card__header{
+    margin-bottom: .3rem;
+}
+.Card h1{
+    font-size: 1rem;
+}
+.Card h2{
+    font-size: 1.5rem;
+}
+
+.Card p{
+    font-size: .8rem;
+}
+
+/* Card backgrounds */
+.Card.Work{
+    background-color: var(--light-red);
+}
+.Card.Play{
+    background-color: var(--soft-blue);
+}
+.Card.Study{
+    background-color: var(--light-red-2);
+}
+.Card.Exercise{
+    background-color: var(--lime-green);
+}
+.Card.Social{
+    background-color: var(--violet);
+}
+.Card.Self_Care{
+    background-color: var(--soft-orange);
+}
